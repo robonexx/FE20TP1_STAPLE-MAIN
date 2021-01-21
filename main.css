@@ -1,0 +1,90 @@
+/* Make it local */
+@import url('https://rsms.me/inter/inter.css');
+
+/* Style Components */
+@import url("styles/side-nav.css");
+@import url("styles/note-list.css");
+@import url("styles/note-editor.css");
+@import url("styles/dark.css");
+@import url("styles/landing-modal.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    min-width: 0;
+    min-height: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: var(--bg);
+    -webkit-transition: background-color 0.5s ease-in;
+  -moz-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  transition: background-color 0.5s ease-in;
+}
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+@media print {
+    .side-nav, .note-list, .toolbar-buttons {
+        display: none !important;
+    }
+
+    .editor-container {
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+.button-inactive {
+    color: rgb(200, 200, 200);
+}
+
+.button-inactive.alt {
+    color: rgb(144, 144, 144);
+}
+
+
+#new-note-btn {
+    cursor:pointer;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: #07b1a3;
+    padding: 17px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+#new-note-btn:hover {
+    cursor:pointer;
+    border-radius: 25px;
+    background-color: #068b80;
+    padding: 17px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+
+}

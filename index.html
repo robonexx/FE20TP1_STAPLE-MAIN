@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Welcome to your favorite web organizer!">
+    <title>Quire</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <!-- make it local -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <script src="scripts/tinyInitialize.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="tinymce/tinymce.min.js"></script>
+</head>
+<body>
+    
+    <main>
+        <div id="landing-modal" class="modal">
+            <div class="modal-content">
+                <h1 class="modal-logo">Q</h1>
+                <h2 class="modal-title">Quire</h2>
+                <p class="modal-subtitle">Welcome to your favorite web organizer</p>
+                <p>The Quire app is the number one note taking app, with the ability to easily find your notes. You don't have to sign up and you still have access to powerful editing tools to organize your web notes. Wether it's at the office during an important client conference call, at home or anywhere else. We have to jot down different types of notes and information on a routine basis. This is where Quire comes in to play. This handy app lets you keep note of everything.</p>
+                <p id="modal-button"><a href="#" class="site-link">Continue to the app</a></p>
+            </div>
+        </div>
+        <nav class="side-nav">
+            <ul class="main-side-nav">
+                <li id="logo-btn"><h2>Q</h2></li>
+                <li id="back-btn"><i class="fas fa-arrow-left"></i></li>
+                <!-- <li id="new-note-btn"><i class="fas fa-pen"></i></li> -->
+                <li id="favorite-btn"><i class="fas fa-heart"></i></li>
+                <li> 
+                    <!-- Toggle switch dark / light mode-->
+                   <div class="onoffswitch">
+                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
+                       <label class="onoffswitch-label" for="myonoffswitch">
+                           <span class="onoffswitch-inner"></span>
+                           <span class="onoffswitch-switch"></span>
+                       </label>
+                   </div>
+                </li>
+                <li><i class="fas fa-search button-inactive"></i></li>
+                <li><i class="fas fa-chart-bar button-inactive"></i></li>
+                <li class="last-item"><i class="fas fa-cog button-inactive"></i></li>
+            </ul>
+        </nav>
+
+        <div id="new-note-btn"><i class="fas fa-pen"></i></div>
+
+        <ul class="note-list" id="note-list"></ul>
+
+        <div class="note-editor">
+			<div class="editor-container">
+				<div class="title-toolbar">
+					<input id="title-input" placeholder="Enter title">
+					<div class="toolbar-buttons">
+						<button id="delete-note-btn"><i class="fas fa-trash"></i></button>
+						<button id="print-note-btn"><i class="fas fa-print"></i></button>
+						<button><i class="fas fa-ellipsis-v button-inactive alt"></i></button>
+					</div>
+				</div>
+				<div id="body-text-area"></div>
+			</div>
+        </div>
+       
+
+      
+    </main>
+    
+    <!-- Modal script -->
+    <script src="scripts/landingModal.js"></script>
+</body>
+</html>
